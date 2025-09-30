@@ -1,39 +1,31 @@
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap');
-
-* {
-  margin: 0;
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+*{
   padding: 0;
+  margin: 0;
   box-sizing: border-box;
-  font-family: 'Outfit', sans-serif;
-  scroll-behavior: smooth;
+  font-family: Outfit;
 }
-
-body {
+body{
   min-height: 100vh;
+  background-color: #FCFCFC;
 }
-
-a {
+a{
   text-decoration: none;
   color: inherit;
 }
-
-.app {
-  width: 80%;
-  margin: auto;
+hr{
+  border: none;
+  height: 1px;
+  background-color: #A9A9A9;
 }
-
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-
-  100% {
-    opacity: 1;
-  }
+.app-content{
+  display: flex;
 }
-
-@media (max-width:1050px) {
-  .app {
-    width: 90%;
-  }
+.flex-col{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.cursor{
+  cursor: pointer;
 }

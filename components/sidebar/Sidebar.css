@@ -1,0 +1,98 @@
+/* Large screen design */
+.sidebar {
+    width: 18%;
+    min-height: 100vh;
+    border: 1.5px solid #A9A9A9;
+    border-top: 0;
+    font-size: max(1vw, 10px);
+    background: #0d6efd; /* primary blue */
+    color: white;
+    transition: all 0.3s ease;
+}
+
+.sidebar-options {
+    padding-top: 50px;
+    padding-left: 10%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.sidebar-option {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    border-left: 2px solid #fff;
+    padding: 8px 10px;
+    border-radius: 3px 0px 0px 3px;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.3s ease;
+    color: white;
+}
+
+.sidebar-option img {
+    width: 20px;
+}
+
+.sidebar-option p {
+    margin: 0;
+}
+
+.sidebar-option.active {
+    background-color: #3a8dff; /* lighter blue for active */
+}
+
+.sidebar-option:hover {
+    background-color: #2565d6; /* darker hover */
+}
+
+/* Small screen adjustments */
+@media (max-width: 900px) {
+    .sidebar {
+        width: 60px; /* compact width for icons */
+        padding-top: 20px;
+        padding-bottom: 20px;
+        border-right: 1px solid #fff;
+    }
+
+    .sidebar-options {
+        padding-left: 0;
+        gap: 20px; /* space between icons */
+        align-items: center;
+    }
+
+    .sidebar-option {
+        justify-content: center; /* center icons */
+        padding: 12px 0; /* touch-friendly padding */
+        border-radius: 8px;
+        width: 100%;
+        position: relative;
+    }
+
+    .sidebar-option p {
+        display: none; /* hide text on small screen */
+    }
+
+    .sidebar-option img {
+        width: 28px;
+        height: 28px;
+    }
+
+    /* subtle left border for hover/active */
+    .sidebar-option::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        border-left: 2px solid white;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    }
+
+    .sidebar-option.active::before,
+    .sidebar-option:hover::before {
+        opacity: 1;
+    }
+}
