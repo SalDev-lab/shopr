@@ -1,0 +1,162 @@
+.place-order {
+  max-width: 1200px;
+  margin: 2rem auto;
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  font-family: 'Poppins', sans-serif;
+}
+
+.place-order-left,
+.place-order-right {
+  flex: 1;
+  min-width: 300px;
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.05);
+}
+
+.place-order-left .title,
+.place-order-right h2 {
+  color: #2563eb;
+  font-size: clamp(1.5rem, 2.5vw, 2rem);
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.multi-field {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.multi-field input {
+  flex: 1;
+}
+
+input[type="text"],
+input[type="email"] {
+  width: 100%;
+  padding: 0.65rem 0.75rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  outline: none;
+  font-size: 0.95rem;
+}
+
+input:focus {
+  border-color: #2563eb;
+}
+
+.cart-total,
+.payment {
+  margin-bottom: 1.5rem;
+}
+
+.cart-total-details {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.95rem;
+  margin: 0.5rem 0;
+}
+
+.cart-total-details.total {
+  font-weight: 700;
+  font-size: 1.05rem;
+}
+
+hr {
+  border: 0;
+  border-top: 1px solid #e2e8f0;
+  margin: 0.5rem 0;
+}
+
+/* PAYMENT OPTIONS */
+.payment-option {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  background: #f0f6ff;
+  padding: 0.5rem 1rem;
+  margin-bottom: 0.75rem;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.2s, background 0.2s;
+}
+
+.payment-option.active {
+  background: #2563eb;
+  color: #fff;
+}
+
+.payment-option img {
+  width: 20px;
+  height: 20px;
+}
+
+.payment-option.active img {
+  filter: brightness(0) invert(1);
+}
+
+.payment-option:hover {
+  transform: scale(1.02);
+}
+
+/* SUBMIT BUTTON */
+.place-order-submit {
+  width: 100%;
+  padding: 0.75rem;
+  background: #2563eb;
+  color: #fff;
+  font-weight: 600;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.2s, background 0.2s;
+}
+
+.place-order-submit:hover {
+  transform: scale(1.02);
+  background: #1d4ed8;
+}
+
+.transfer-box {
+  background: #f0f6ff;
+  padding: 1rem;
+  border-radius: 12px;
+  margin-top: 0.75rem;
+  font-size: 0.9rem;
+  color: #1e293b;
+}
+
+.transfer-box ul {
+  padding-left: 1.2rem;
+  margin-top: 0.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.transfer-box ul li {
+  margin-bottom: 0.3rem;
+  line-height: 1.3;
+}
+
+.transfer-checkbox {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.transfer-checkbox p {
+  margin: 0;
+  font-size: 0.88rem;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .multi-field {
+    flex-direction: column;
+  }
+}
